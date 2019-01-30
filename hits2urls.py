@@ -47,9 +47,9 @@ def main(args):
     projects_file = args.projects_file
 
     with open(projects_file, "r") as csvfile:
-        for contents in csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC):
-            contents[0] = int(contents[0])
-            contents[2] = int(contents[2])
+        for contents in csv.reader(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL):
+            # contents[0] = int(contents[0])
+            # contents[2] = int(contents[2])
             row = ProjectRecord(*contents)
             owner_name = row.url.split('/')[4]
             projects_dict[row.name] = row.id
@@ -87,7 +87,7 @@ def main(args):
 def obtain_branch(username, repo, init_path):
     """
     """
-    filepath = init_path + "/default/" + username + ":" + repo + ".json"
+    filepath = init_path + "/default/" + username + "_" + repo + ".json"
     if os.path.isfile(filepath):
         with open(filepath) as data_file:
             data = json.load(data_file)

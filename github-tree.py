@@ -48,7 +48,7 @@ def main(args):
     with open(args.out_file, 'w') as ofile:
         for jsonfile_path in repo_jsons:
             jsonfile = "%s/%s" % (os.path.abspath(args.trees_path), jsonfile_path)
-            (owner_id, repo_id) = jsonfile_path.split(":")
+            (owner_id, repo_id) = jsonfile_path.split("_")
             repo_id = repo_id[:-5]
 
             logger.debug("Opening %s" % jsonfile)

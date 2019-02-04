@@ -1,6 +1,11 @@
 ---
 # 1. Positive extensions for interesting files
 level-one_exts:
+  - xmi
+  - uml
+
+# 2. Extensions marked as positive only if file-name contains a keyword (See 3.)
+level-two_exts:
   - jpg
   - jpg
   - gif
@@ -10,13 +15,12 @@ level-one_exts:
   - emf
   - exif
   - wmf
-  - xmi
-  - uml
-
-# 2. Extensions marked as positive only if file-name contains a keyword (See 3.)
-level-two_exts:
-  
 
 # 3. Keywords
 keywords:
-  
+  - uml
+  - class-diagram
+  - classdiagram
+  - cd
+  - class_diagram
+  - class+diagram

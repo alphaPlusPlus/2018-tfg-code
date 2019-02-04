@@ -1,0 +1,3 @@
+python github-api.py --github-token 1ad471cf9886f495c3f601807b2ee000e1ec3bbb --projects-file projects.csv
+python github-tree.py --heuristics-file config/github-tree.yml --trees-path trees¨
+python hits2urls.py --projects-file projects.csv --json-path master --hits-file hits.txt

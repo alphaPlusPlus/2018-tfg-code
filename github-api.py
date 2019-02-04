@@ -40,7 +40,7 @@ def main(args):
 
     logger.info('GitHub-API starts...')
     github_key = args.github_token
-    ProjectRecord = namedtuple('ProjectRecord', 'id, url, owner_id, name, descriptor, language, created_at, forked_from, deleted, updated_at')
+    ProjectRecord = namedtuple('ProjectRecord', 'id, url, owner_name')
 
     if not os.path.exists("master"):
         os.mkdir("master")
@@ -56,12 +56,12 @@ def main(args):
             # For each line in csv file...
             repo = ProjectRecord(*contents)
 
-            if repo.owner_id + "_" + repo.id + ".json" in alreadyList:
+            if repo.owner_name + "_" + repo.id + ".json" in alreadyList:
                 continue  # Break loop, if json is already downloaded
             if not get_json(repo, github_key, "master", "/branches/master"):
                 continue  # Break loop, ¿?
             sha_hash = read_json(repo, "master", ["commit", "commit", "tree", "sha"])
-
+            logger.info(sha_hash)
             if not sha_hash:
                 logger.debug("Master branch not found: %s", repo.url)
                 if not get_json(repo, github_key, "default"):
@@ -121,7 +121,7 @@ def get_json(repo, github_key, directory, url_append=""):
         logger.debug("directory: %s", directory)
         return 0
     try:
-        json_name = "%s/%s_%s.json" % (directory, str(repo.owner_id), str(repo.id))
+        json_name = "%s/%s_%s.json" % (directory, str(repo.owner_name), str(repo.id))
         logger.debug("directory: %s", json_name)
         urllib.request.urlretrieve(url, json_name)
     except IOError as e:
@@ -137,7 +137,7 @@ def read_json(repo, directory, lookup_list):
     it looks up for a given value in the JSON (given as a list)
     and returns its value
     """
-    json_name = "%s/%s_%s.json" % (directory, str(repo.owner_id), str(repo.id))
+    json_name = "%s/%s_%s.json" % (directory, str(repo.owner_name), str(repo.id))
     with open(json_name) as data_file:
         try:
             data = json.load(data_file)

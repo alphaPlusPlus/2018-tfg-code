@@ -39,9 +39,7 @@ def main(args):
 
     start = "https://raw.githubusercontent.com/"
     json_path = os.path.abspath(args.json_path)
-    ProjectRecord = namedtuple('ProjectRecord', 'id, url, owner_id, name,\
-                               descriptor, language, created_at, forked_from,\
-                               deleted, updated_at')
+    ProjectRecord = namedtuple('ProjectRecord', 'id, url, owner_id')
     owners_dict = {}
     projects_dict = {}
     projects_file = args.projects_file
@@ -52,7 +50,7 @@ def main(args):
             # contents[2] = int(contents[2])
             row = ProjectRecord(*contents)
             owner_name = row.url.split('/')[4]
-            projects_dict[row.name] = row.id
+            projects_dict[row.id] = row.id
             owners_dict[owner_name] = row.owner_id
 
     with open(args.hits_file, 'r') as hfile:

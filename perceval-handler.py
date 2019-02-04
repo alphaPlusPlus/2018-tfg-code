@@ -50,6 +50,8 @@ def main(args):
         for line in url_file:
             try:
                 url = line.split('/')
+                if not url:
+                    continue
                 repo = "%s/%s" % (url[3], url[4])
             except IndexError:
                 logger.error("Error in repo (line) " + line + "\r\n")
@@ -98,11 +100,13 @@ def main(args):
         elif result == 'True':
             logger.error("Private: %s" % repo)
         else:
-            repo_url = "https://github.com/%s" % repo
+            repo_url = "https://github.com/%s" % repo + ".git"
 
             logger.info('Executing Perceval with repo: %s' % repo)
             logger.debug('Repo stats. Size: %s KB' % dicc_out["size"])
-            gitpath = '%s/%s' % (os.path.abspath(args.perceval_path), repo)
+            gitpath = '%s\%s' % (os.path.abspath(args.perceval_path), repo)
+            if not os.path.exists(gitpath):
+                os.makedirs(gitpath)
             git = Git(uri=repo_url, gitpath=gitpath)
             try:
                 commits = [commit for commit in git.fetch()]

@@ -48,12 +48,15 @@ def main(args):
     with open(args.urls_file, 'r') as url_file:
         os.chdir(os.path.abspath(args.output_path))
         for line in url_file:
+            if line in ['\n', '\r\n']:
+                continue
             try:
                 url = line.split('/')
                 if not url:
                     continue
                 repo = "%s/%s" % (url[3], url[4])
             except IndexError:
+                print("url:" + line)
                 logger.error("Error in repo (line) " + line + "\r\n")
                 continue
 
@@ -73,7 +76,7 @@ def main(args):
             continue
 
         api_url = "https://api.github.com/repos/" + str(repo) + "?access_token=" + github_key
-        logger.info("Checking metadata for repo %s" % repo)
+        logger.info("Checking metadata for repo %s" % api_url)
         try:
             response = urllib.request.urlopen(api_url)
         except urllib.error.HTTPError:
@@ -104,9 +107,7 @@ def main(args):
 
             logger.info('Executing Perceval with repo: %s' % repo)
             logger.debug('Repo stats. Size: %s KB' % dicc_out["size"])
-            gitpath = '%s\%s' % (os.path.abspath(args.perceval_path), repo)
-            if not os.path.exists(gitpath):
-                os.makedirs(gitpath)
+            gitpath = '%s/%s' % (os.path.abspath(args.perceval_path), repo)
             git = Git(uri=repo_url, gitpath=gitpath)
             try:
                 commits = [commit for commit in git.fetch()]

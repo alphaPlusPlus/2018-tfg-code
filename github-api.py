@@ -41,15 +41,16 @@ def main(args):
     logger.info('GitHub-API starts...')
     github_key = args.github_token
     ProjectRecord = namedtuple('ProjectRecord', 'id, url, owner_name')
+    
+    out_path = os.path.abspath(args.output_path)
+    if not os.path.exists(out_path + "/master"):
+        os.mkdir(out_path + "/master")
+    if not os.path.exists(out_path + "/default"):
+        os.mkdir(out_path + "/default")
+    if not os.path.exists(out_path + "/trees"):
+        os.mkdir(out_path + "/trees")
 
-    if not os.path.exists("master"):
-        os.mkdir("master")
-    if not os.path.exists("default"):
-        os.mkdir("default")
-    if not os.path.exists("trees"):
-        os.mkdir("trees")
-
-    alreadyList = os.listdir("master")
+    alreadyList = os.listdir(out_path + "/master")
 
     with open(args.projects_file, "r") as csvfile:
         for contents in csv.reader(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL):
@@ -58,29 +59,29 @@ def main(args):
 
             if repo.owner_name + "_" + repo.id + ".json" in alreadyList:
                 continue  # Break loop, if json is already downloaded
-            if not get_json(repo, github_key, "master", "/branches/master"):
+            if not get_json(repo, github_key, out_path + "/master", "/branches/master"):
                 continue  # Break loop, ¿?
-            sha_hash = read_json(repo, "master", ["commit", "commit", "tree", "sha"])
+            sha_hash = read_json(repo, out_path + "/master", ["commit", "commit", "tree", "sha"])
             logger.info(sha_hash)
             if not sha_hash:
                 logger.debug("Master branch not found: %s", repo.url)
                 if not get_json(repo, github_key, "default"):
                     continue
-                default = read_json(repo, "default", ["default_branch"])
+                default = read_json(repo, out_path + "/default", ["default_branch"])
 
                 if not default:
                     logger.debug("No default branch found: %s", repo.url)
                     time.sleep(1.40)
                     continue
-                if not get_json(repo, github_key, "master", "/branches/" + default):
+                if not get_json(repo, github_key, out_path + "/master", "/branches/" + default):
                     continue
-                sha_hash = read_json(repo, "master", ["commit", "commit", "tree", "sha"])
+                sha_hash = read_json(repo, out_path + "/master", ["commit", "commit", "tree", "sha"])
 
                 if not sha_hash:
                     logger.debug("Default branch not found: %s", repo.url)
                     time.sleep(2.10)
                     continue
-            if not get_json(repo, github_key, "trees", "/git/trees/" + sha_hash + "?recursive=1"):
+            if not get_json(repo, github_key, out_path + "/trees", "/git/trees/" + sha_hash + "?recursive=1"):
                 continue
             time.sleep(1.40)
 
@@ -199,6 +200,8 @@ def parse_args():
                         help='GitHub token')
     parser.add_argument('--projects-file', dest='projects_file', required=True,
                         help='Projects file')
+    parser.add_argument('--output-path', dest='output_path', required=False,
+                        default=os.curdir, help='Path where output files are stored into')
     parser.add_argument('--log-file', dest='log_file', default='github-api.log',
                         required=False, help='Path to log file')
     parser.add_argument('-g', '--debug', dest='debug_mode_on', action='store_true',

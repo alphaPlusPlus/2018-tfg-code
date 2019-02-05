@@ -1,17 +1,17 @@
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/2. SRS/v2.0/actor.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/2. SRS/v2.0/customer.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/2. SRS/v2.0/manager.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/2. SRS/v2.0/page flow.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/5th Week/Class_Diagram_Chanh_v1.0.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/5th Week/Dung/SE18_PhamAnhDung_Login&Staff_SequenceDiagram_v1.0.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/5th Week/SE18_ClassDiagram_v1.0.jpg
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/6th Week/Class_Diagram_Chanh_v2.0.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/6th Week/Cung v2.0/reports_sequence_diagram.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/6th Week/Dung v2.0/SE18_PhamAnhDung_Login&Staff_SequenceDiagram_v2.0.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/6th Week/SE18_ClassDiagram_v2.0.jpg
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/1. BAI NOP CHO FSOFT/SE18_SanPham_Tuan7/SE18_ClassDiagram_v3.0.jpg
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/Class_Diagram_Chanh_v3.0.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/Dung v3.0/SE18_PhamAnhDung_Login&Staff_SequenceDiagram_v3.0.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/Report_Sequence/reports_sequence_diagram.uml
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/SE18_ClassDiagram_v3.0.jpg
-https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/cung_week7/sequence_diagram.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/2. SRS/v2.0/actor.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/2. SRS/v2.0/customer.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/2. SRS/v2.0/manager.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/2. SRS/v2.0/page flow.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/5th Week/Class_Diagram_Chanh_v1.0.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/5th Week/Dung/SE18_PhamAnhDung_Login&Staff_SequenceDiagram_v1.0.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/5th Week/SE18_ClassDiagram_v1.0.jpg
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/6th Week/Class_Diagram_Chanh_v2.0.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/6th Week/Cung v2.0/reports_sequence_diagram.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/6th Week/Dung v2.0/SE18_PhamAnhDung_Login&Staff_SequenceDiagram_v2.0.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/6th Week/SE18_ClassDiagram_v2.0.jpg
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/1. BAI NOP CHO FSOFT/SE18_SanPham_Tuan7/SE18_ClassDiagram_v3.0.jpg
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/Class_Diagram_Chanh_v3.0.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/Dung v3.0/SE18_PhamAnhDung_Login&Staff_SequenceDiagram_v3.0.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/Report_Sequence/reports_sequence_diagram.uml
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/SE18_ClassDiagram_v3.0.jpg
+https://raw.githubusercontent.com/11TCLC-DA-CNPM/doan-cnpm-quanly-ban-dien-thoai-pro11tclc/master/7th Week/cung_week7/sequence_diagram.uml

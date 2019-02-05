@@ -1,3 +1,5 @@
-python github-api.py --github-token 1ad471cf9886f495c3f601807b2ee000e1ec3bbb --projects-file projects.csv
-python github-tree.py --heuristics-file config/github-tree.yml --trees-path trees¨
+python github-api.py --github-token 4d4a1431e2aa2401ae04329dc929fb4e7a976c4b --projects-file projects.csv
+python github-tree.py --heuristics-file config/github-tree.yml --trees-path treesï¿½
 python hits2urls.py --projects-file projects.csv --json-path master --hits-file hits.txt
+python perceval-handler.py --github-token 4d4a1431e2aa2401ae04329dc929fb4e7a976c4b  --urls-file urls.txt --output-path D:\temp  --perceval-path perc
+python projects2sql.py --db-name testDB --json-path D:\temp --urls-file urls.txt --output-path d:\sq
